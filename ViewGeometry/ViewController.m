@@ -38,10 +38,10 @@
     
     CGFloat x = 0.f;
     CGFloat y = 0.f;
-    for(int row = 1;row < 9;row++)
+    for(int row = 1;row <= 8;row++)
     {
         int startColumn = row % 2 ? 2 : 1;
-        for(int column = startColumn;column < 9;column = column + 2)
+        for(int column = startColumn;column <= 8;column = column + 2)
         {
             if(column == 1)
             {
