@@ -274,8 +274,11 @@ typedef enum{
     }
 }
 
+- (CGFloat) randomFromZeroToOne{
+    return (float)(arc4random() % 256) / 255.f;
+}
 -(UIColor*)randomColor{
-    return [[UIColor alloc] initWithRed:(float)(arc4random() % 100) / 100.f green:(float)(arc4random() % 100) / 100.f blue:(float)(arc4random() % 100) / 100.f alpha:(float)(arc4random() % 100) / 100.f];
+    return [[UIColor alloc] initWithRed:[self randomFromZeroToOne] green:[self randomFromZeroToOne]blue:[self randomFromZeroToOne] alpha:[self randomFromZeroToOne]];
 }
 
 - (void)shuffleDraught{
